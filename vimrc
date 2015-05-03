@@ -28,9 +28,28 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'surround.vim'
+
+" neocomplcache
+let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_smart_case = 1
+let g:neocomplcache_enable_camel_case_completion = 1
+let g:neocomplcache_enable_underbar_completion = 1
+let g:neocomplcache_min_syntax_length = 3
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " lightline
 let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ }
 set laststatus=2
+if !has('gui_running')
+  set t_Co=256
+endif
+
+" vim-hybrid
+let g:hybrid_use_Xresources = 1
+colorscheme hybrid
+syntax on
+
