@@ -8,6 +8,17 @@ set backspace=2		" more powerful backspacing
 
 set encoding=utf-8
 
+set autoindent
+
+set shiftwidth=2
+
+set expandtab
+
+set tabstop=2
+
+nnoremap qr :QuickRun
+nnoremap ;; v$hx
+
 set nocompatible
 filetype plugin indent off
 
